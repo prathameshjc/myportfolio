@@ -1,99 +1,126 @@
-import React from 'react'
+import React from 'react';
 import react from '../assets/icons/react.svg'
+import python from '../assets/icons/python.svg'
+import Bar from './Bar';
+
 const languages = [
     {
-        icon: 'react',
-        name: 'python',
-        level: ''
+        icon: python,
+        name: 'Python',
+        level: '45'
     },
     {
-        icon: 'react',
-        name: 'python',
-        level: ''
+        icon: react,
+        name: 'Java',
+        level: '60'
     },
     {
-        icon: 'react',
-        name: 'python',
-        level: ''
+        icon: react,
+        name: 'HTML',
+        level: '80'
+    },
+    {
+        icon: react,
+        name: 'react',
+        level: '60'
+    },
+    {
+        icon: react,
+        name: 'Django',
+        level: '80'
+    },
+    {
+        icon: react,
+        name: 'Bootstrap',
+        level: '80'
     }
 ]
 
 const tools = [
     {
-        icon: 'react',
-        name: 'Github',
-        level: ''
+        icon: react,
+        name: 'Figma',
+        level: '85'
     },
     {
-        icon: 'react',
-        name: 'Github',
-        level: ''
+        icon: react,
+        name: 'Photoshop',
+        level: '45'
     },
     {
-        icon: 'react',
-        name: 'Github',
-        level: ''
-    }
+        icon: react,
+        name: 'Illustrator',
+        level: '60'
+    },
+    {
+        icon: react,
+        name: 'Framer',
+        level: '45'
+    },
+
 ]
+
+
 export const Resume = () => {
     return (
         <div className="container resume">
             <div className="row">
-                <div className="col-lg-6 resume-card">
-                    <div className="resume-card__body">
+                <div className="col-lg-6 resume-card" >
+                    <h4 className="resume-card__heading">
                         Education
-                    </div>
-                    <h5 className='resume-card__title'>
-                        Computer Science and Engineering (BE)
-                    </h5>
-                    <p className="resume-card__name">
-                        Nanasaheb Mahadik College of Engineering, Peth
-                    </p>
-                    <p className='resume-card__details'>
-                        Est voluptua et sadipscing invidunt sadipscing kasd sed sadipscing, duo.
-                    </p>
-                </div>
-                <div className="col-lg-6 resume-card">
+                    </h4>
                     <div className="resume-card__body">
-                        Experience
+                        <h5 className="resume-card__title">
+                            Computer Science Enginnering
+                        </h5>
+                        <p className="resume-card__name">
+                            Academy of Technology(2017-2021)
+                        </p>
+                        <p className="resume-card__details">I am currently persuing B.tech in Computer Science Engineering from Academy of Technology</p>
                     </div>
-                    <h5 className='resume-card__title'>
-                        Computer Science and Engineering (BE)
-                    </h5>
-                    <p className="resume-card__name">
-                        Nanasaheb Mahadik College of Engineering, Peth
-                    </p>
-                    <p className='resume-card__details'>
-                        Est voluptua et sadipscing invidunt sadipscing kasd sed sadipscing, duo.
-                    </p>
+                </div>
+                <div className="col-lg-6 resume-card" >
+                    <h4 className="resume-card__heading">
+                        Experience
+                    </h4>
+                    <div className="resume-card__body">
+                        <h5 className="resume-card__title">
+                            Intern
+                        </h5>
+                        <p className="resume-card__name">
+                            TCS (2020)
+                        </p>
+                        <p className="resume-card__details">I work as a intern in TCS and also completed some projects on testing</p>
+                    </div>
                 </div>
             </div>
-            <div className='row'>
-                <div className='col-lg-6 resume-languages'>
-                    <h5 className='resume-langauge__heading'>
+
+            <div className="row">
+                <div className="col-lg-6 resume-languages">
+                    <h5 className="reume-language__heading">
                         Language and Framework
-                </h5>
-                    <div className='resume-language__body'>
+                    </h5>
+                    <div className="resume-language__body mt-3">
                         {
-                            languages.map(language => {
-                                <Bar language={language} />
-                            })
+                            languages.map(language =>
+                                <Bar value={language} />
+                            )
                         }
                     </div>
                 </div>
-                <div className='col-lg-6 resume-languages'>
-                    <h5 className='resume-langauge__heading'>
+                <div className="col-lg-6 resume-languages">
+                    <h5 className="reume-language__heading">
                         Tools and Softwares
-                </h5>
-                    <div className='resume-language__body'>
+                    </h5>
+                    <div className="resume-language__body mt-3">
                         {
-                            tools.map(tool=>{
-                                <Bar tool={tool}/>
-                            })
+                            tools.map(tool => <Bar value={tool} />)
                         }
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default Resume;
